@@ -8,7 +8,7 @@
       <div class="field">
         <label>Select</label>
         <select v-model="selected">
-          <option :value="option" v-for="(option, index) in this.options" :key="index">{{ option }}</option>
+          <option :value="option" v-for="(option, index) in options" :key="index">{{ option }}</option>
         </select>
       </div>
     </div>
@@ -29,14 +29,11 @@ export default {
       type: String,
       require: true
     },
-    options: {
-      type: Array,
-      require: true
-    }
   },
   data() {
     return {
       selected: this.selectedOption,
+      options: ['standart', 'important', 'overriding'],
     }
   },
   methods: {

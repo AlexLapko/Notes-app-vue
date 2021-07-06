@@ -13,7 +13,6 @@
             :note="note" 
             @addNote="addNote" 
             :selectedOption="selectedOption"
-            :options="options"  
           />
 
           <div class="note-header">
@@ -56,7 +55,6 @@ export default {
       message: null,
       grid: true,
       selectedOption : 'standart',
-      options: ['standart', 'important', 'overriding'],
       note: {
         title: '',
         descr: '',
